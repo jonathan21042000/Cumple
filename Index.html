@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños Arieta ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3, #c471ed);
+            color: white;
+        }
+
+        .contenedor {
+            width: 90%;
+            max-width: 700px;
+            padding: 45px 25px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+            z-index: 10;
+            animation: aparecer 2s ease;
+        }
+
+        .corazon {
+            font-size: 70px;
+            animation: latir 1s infinite;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 15px 0;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.7;
+        }
+
+        .edad {
+            font-size: 28px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 30px;
+            background: white;
+            color: #e84375;
+            font-size: 17px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        button:hover {
+            transform: scale(1.08);
+        }
+
+        .flotante {
+            position: absolute;
+            bottom: -50px;
+            font-size: 30px;
+            animation: subir 8s linear infinite;
+            opacity: 0.8;
+        }
+
+        .f1 { left: 10%; animation-delay: 1s; }
+        .f2 { left: 25%; animation-delay: 3s; }
+        .f3 { left: 45%; animation-delay: 0s; }
+        .f4 { left: 65%; animation-delay: 2s; }
+        .f5 { left: 85%; animation-delay: 4s; }
+
+        @keyframes latir {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.25);
+            }
+        }
+
+        @keyframes subir {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: scale(0.7);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .firma {
+            margin-top: 25px;
+            font-size: 18px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Corazones flotando -->
+    <div class="flotante f1">❤️</div>
+    <div class="flotante f2">💕</div>
+    <div class="flotante f3">💖</div>
+    <div class="flotante f4">💗</div>
+    <div class="flotante f5">💘</div>
+
+    <div class="contenedor">
+
+        <div class="corazon">❤️</div>
+
+        <h1>¡Feliz Cumpleaños!</h1>
+
+        <h2>Para mi querida Arieta 💕</h2>
+
+        <div class="edad">
+            🎂 ¡Felices 22 añitos! 🎂
+        </div>
+
+        <p>
+            Hoy es un día muy especial porque celebramos
+            la vida de una persona increíble. 💖
+        </p>
+
+        <p>
+            Deseo que todos tus sueños se hagan realidad,
+            que nunca te falten motivos para sonreír
+            y que este nuevo año de vida esté lleno
+            de momentos hermosos. ✨
+        </p>
+
+        <p>
+            Espero poder seguir compartiendo muchos
+            momentos especiales contigo. ❤️
+        </p>
+
+        <div class="firma">
+            Con mucho cariño para ti, Arieta 💕
+        </div>
+
+        <button onclick="reproducirMusica()">
+            🎵 Reproducir música ❤️
+        </button>
+
+    </div>
+
+    <!-- Música -->
+    <audio id="musica" loop>
+        <source src="musica.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function reproducirMusica() {
+            let musica = document.getElementById("musica");
+
+            if (musica.paused) {
+                musica.play();
+            } else {
+                musica.pause();
+            }
+        }
+    </script>
+
+</body>
+</html>
